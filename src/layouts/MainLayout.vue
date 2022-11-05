@@ -11,25 +11,15 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title>
-          Zanzibar's World of Nuclear Power
-        </q-toolbar-title>
+        <q-toolbar-title> Zanzibar's World of Nuclear Power </q-toolbar-title>
 
         <div>on Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-    >
+    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
-        <q-item-label
-          header
-        >
-          Essential Links
-        </q-item-label>
+        <q-item-label header> Essential Links </q-item-label>
 
         <EssentialLink
           v-for="link in essentialLinks"
@@ -54,13 +44,13 @@ const linksList = [
     title: 'Forum',
     caption: 'The Making of Zanzi World',
     icon: 'record_voice_over',
-    link: 'https://zanzisworldofnuclearpower.locals.com/'
+    link: 'https://zanzisworldofnuclearpower.locals.com/',
   },
   {
     title: 'Twitter',
     caption: '@ZanzibarNuclear',
     icon: 'rss_feed',
-    link: 'https://twitter.com/ZanzibarNuclear'
+    link: 'https://twitter.com/ZanzibarNuclear',
   },
 ]
 
@@ -68,19 +58,19 @@ export default defineComponent({
   name: 'MainLayout',
 
   components: {
-    EssentialLink
+    EssentialLink,
   },
 
-  setup () {
+  setup() {
     const leftDrawerOpen = ref(false)
 
     return {
       essentialLinks: linksList,
       leftDrawerOpen,
-      toggleLeftDrawer () {
+      toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value
-      }
+      },
     }
-  }
+  },
 })
 </script>
