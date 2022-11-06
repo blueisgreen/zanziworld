@@ -19,7 +19,7 @@
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
-        <q-item-label header> Essential Links </q-item-label>
+        <q-item-label header> Power Lines </q-item-label>
 
         <EssentialLink
           v-for="link in essentialLinks"
@@ -40,6 +40,13 @@ import { defineComponent, ref } from 'vue'
 import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
+  {
+    title: 'Zen',
+    caption: 'Start at the beginning',
+    icon: 'home',
+    link: '/',
+    stay: true,
+  },
   {
     title: 'Forum',
     caption: 'The Making of Zanzi World',

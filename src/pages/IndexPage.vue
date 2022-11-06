@@ -1,13 +1,16 @@
 <template>
   <q-page class="flex flex-center">
-    <div>
-      <img
-        alt="Zanzibar"
+    <div class="q-pa-md">
+      <q-img
+        alt="Zanzibar, Nuclear Hero"
         src="~assets/Zanzibar.svg"
-        style="width: 200px; height: 200px"
+        width="200px"
+        height="200px"
       />
     </div>
-    <what-say-you />
+    <div>
+      <what-say-you />
+    </div>
   </q-page>
 </template>
 
