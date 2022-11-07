@@ -41,7 +41,7 @@ import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
   {
-    title: 'Zen',
+    title: 'Ask Zanzibar',
     caption: 'Start at the beginning',
     icon: 'home',
     link: '/',

@@ -1,15 +1,21 @@
 <template>
-  <q-page class="flex flex-center">
+  <q-page class="flex">
     <div class="q-pa-md">
-      <q-img
-        alt="Zanzibar, Nuclear Hero"
-        src="~assets/Zanzibar.svg"
-        width="200px"
-        height="200px"
-      />
-    </div>
-    <div>
-      <what-say-you />
+      <div>
+        <q-img
+          alt="Zanzibar, Nuclear Hero"
+          src="~assets/Zanzibar.svg"
+          width="200px"
+          height="200px"
+        />
+        <div>
+          I am Zanzibar. I can teach you about nuclear power. What would you
+          like to know?
+        </div>
+      </div>
+      <div>
+        <what-say-you />
+      </div>
     </div>
   </q-page>
 </template>

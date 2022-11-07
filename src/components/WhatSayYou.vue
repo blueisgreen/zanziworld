@@ -1,7 +1,4 @@
 <template>
-  <div>
-    Hi. I am Zanzibar, and I can teach you about nuclear power. Who are you?
-  </div>
   <div class="q-pa-md" style="width: 100%; max-width: 500px">
     <SimpleEditor
       initial-message="Blargy pants are fun to wear."
