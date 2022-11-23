@@ -11,25 +11,15 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title>
-          Quasar App
-        </q-toolbar-title>
+        <q-toolbar-title> Zanzibar's World of Nuclear Power </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <div>on Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-    >
+    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
-        <q-item-label
-          header
-        >
-          Essential Links
-        </q-item-label>
+        <q-item-label header> Power Lines </q-item-label>
 
         <EssentialLink
           v-for="link in essentialLinks"
@@ -51,66 +41,43 @@ import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
+    title: 'Ask Zanzibar',
+    caption: 'Start at the beginning',
+    icon: 'home',
+    link: '/',
+    stay: true,
   },
   {
     title: 'Forum',
-    caption: 'forum.quasar.dev',
+    caption: 'The Making of Zanzi World',
     icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
+    link: 'https://zanzisworldofnuclearpower.locals.com/',
   },
   {
     title: 'Twitter',
-    caption: '@quasarframework',
+    caption: '@ZanzibarNuclear',
     icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
+    link: 'https://twitter.com/ZanzibarNuclear',
   },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  }
 ]
 
 export default defineComponent({
   name: 'MainLayout',
 
   components: {
-    EssentialLink
+    EssentialLink,
   },
 
-  setup () {
+  setup() {
     const leftDrawerOpen = ref(false)
 
     return {
       essentialLinks: linksList,
       leftDrawerOpen,
-      toggleLeftDrawer () {
+      toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value
-      }
+      },
     }
-  }
+  },
 })
 </script>
