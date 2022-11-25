@@ -27,7 +27,7 @@ module.exports = configure(function (/* ctx */) {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     // https://v2.quasar.dev/quasar-cli/boot-files
-    boot: ['axios', 'amplify'],
+    boot: ['axios'],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#css
     css: ['app.scss'],
@@ -69,7 +69,11 @@ module.exports = configure(function (/* ctx */) {
       // polyfillModulePreload: true,
       // distDir
 
-      // extendViteConf (viteConf) {},
+      extendViteConf(viteConf, { isClient, isServer }) {
+        Object.assign(viteConf.resolve.alias, {
+          './runtimeConfig': './runtimeConfig.browser',
+        })
+      },
       // viteVuePluginOptions: {},
 
       // vitePlugins: [
