@@ -9,9 +9,14 @@
       flat
       bordered
       v-for="entry in whatsayyou.messages"
-      :key="entry.createdOn"
+      :key="entry.id"
     >
-      <q-card-section><div v-html="entry.message" /></q-card-section>
+      <q-card-section>
+        <div>{{entry.who}} said:</div>
+      </q-card-section>
+      <q-card-section>
+        <div v-html="entry.content" />
+      </q-card-section>
     </q-card>
   </div>
 </template>

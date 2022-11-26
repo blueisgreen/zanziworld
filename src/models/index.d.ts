@@ -13,7 +13,6 @@ type EagerChatMessage = {
   };
   readonly id: string;
   readonly who?: string | null;
-  readonly when?: string | null;
   readonly content?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
@@ -26,7 +25,6 @@ type LazyChatMessage = {
   };
   readonly id: string;
   readonly who?: string | null;
-  readonly when?: string | null;
   readonly content?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;

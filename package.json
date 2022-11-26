@@ -11,7 +11,9 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
+    "@aws-amplify/datastore": "^4.0.4",
     "@quasar/extras": "^1.0.0",
+    "aws-amplify": "^5.0.4",
     "axios": "^0.21.1",
     "pinia": "^2.0.11",
     "quasar": "^2.6.0",
