@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-zanzisworld-dev-215003-authRole",
+      "UnauthRoleArn": "arn:aws:iam::686693387580:role/amplify-zanzisworld-dev-215003-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::686693387580:role/amplify-zanzisworld-dev-215003-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-zanzisworld-dev-215003-deployment",
+      "UnauthRoleName": "amplify-zanzisworld-dev-215003-unauthRole",
+      "StackName": "amplify-zanzisworld-dev-215003",
+      "StackId": "arn:aws:cloudformation:us-west-2:686693387580:stack/amplify-zanzisworld-dev-215003/036c9010-6c85-11ed-aae1-0a31c6bae9ed",
+      "AmplifyAppId": "dpwlvo76a8ula"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "dpwlvo76a8ula",
+          "type": "manual"
+        }
+      }
+    }
+  }
+}
