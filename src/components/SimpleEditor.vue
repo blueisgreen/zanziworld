@@ -7,7 +7,6 @@
       placeholder="Type whatever you like..."
     />
     <q-btn label="Post" @click="handlePost" />
-    <q-btn label="Click" @click="handleClick" />
   </div>
 </template>
 
@@ -28,9 +27,6 @@ export default {
       this.$emit('post', this.editor)
       this.editor = ''
     },
-    handleClick() {
-      this.$emit('click-it')
-    }
   },
   data() {
     return {

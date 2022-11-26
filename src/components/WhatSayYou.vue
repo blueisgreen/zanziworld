@@ -1,9 +1,7 @@
 <template>
   <div class="q-pa-md" style="width: 100%; max-width: 500px">
     <SimpleEditor
-      initial-message="Blargy pants are fun to wear."
       @post="handlePost"
-      @click-it="handleClick"
     />
     <q-card
       flat
@@ -25,9 +23,6 @@
 import SimpleEditor from './SimpleEditor.vue'
 import { useWhatSayYouStore } from 'stores/whatsayyou-store.js'
 const whatsayyou = useWhatSayYouStore()
-const handleClick = () => {
-  alert('clicked it yo.')
-}
 const handlePost = (msg) => {
   whatsayyou.addMessage(msg)
 }
