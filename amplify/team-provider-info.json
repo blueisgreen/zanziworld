@@ -17,6 +17,9 @@
           "appId": "dpwlvo76a8ula",
           "type": "manual"
         }
+      },
+      "auth": {
+        "zanzisworld": {}
       }
     }
   }
