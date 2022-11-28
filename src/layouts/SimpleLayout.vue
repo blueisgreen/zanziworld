@@ -19,7 +19,7 @@
             href="https://zanzisworldofnuclearpower.locals.com/"
             target="_blank"
           />
-          <q-btn label="Sign In Here" :to="{ name: 'auth' }" target="_blank" />
+          <q-btn label="Sign In Here" :to="{ name: 'auth' }" />
         </div>
       </q-toolbar>
     </q-header>
