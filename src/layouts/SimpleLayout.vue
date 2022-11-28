@@ -8,17 +8,18 @@
           round
           icon="fa-solid fa-radiation"
           aria-label="Home"
-          to="/home"
+          :to="{ name: 'main' }"
         />
 
         <q-toolbar-title> Zanzibar's World of Nuclear Power </q-toolbar-title>
 
         <div>
           <q-btn
-            label="Join"
+            label="Join on Locals"
             href="https://zanzisworldofnuclearpower.locals.com/"
             target="_blank"
           />
+          <q-btn label="Sign In Here" :to="{ name: 'auth' }" target="_blank" />
         </div>
       </q-toolbar>
     </q-header>
@@ -28,14 +29,3 @@
     </q-page-container>
   </q-layout>
 </template>
-
-<script setup>
-import { defineComponent, ref } from 'vue'
-
-const goHome = () => {
-  console.log('go home!')
-}
-const doTheOtherThing = () => {
-  console.log('do something else')
-}
-</script>
