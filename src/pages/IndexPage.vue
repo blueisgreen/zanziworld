@@ -1,6 +1,6 @@
 <template>
   <q-page class="flex">
-    <div class="q-pa-md">
+    <div class="q-pa-lg">
       <div class="col">
         <div>
           <q-img

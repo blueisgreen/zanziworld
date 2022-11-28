@@ -1,25 +1,38 @@
 <template>
   <div class="boxy">
-    <q-input v-model="username" label="Username" stack-label :dense="dense" />
+    <div class="q-gutter-sm">
+      <q-radio v-if="!userStore.signedIn" v-model="mode" val="signIn" label="Sign In" />
+      <q-radio v-if="userStore.signedIn" v-model="mode" val="signOut" label="Sign Out" />
+      <q-radio v-if="!userStore.signedIn" v-model="mode" val="signUp" label="Join" />
+      <q-radio v-if="!userStore.signedIn" v-model="mode" val="verify" label="Verify" />
+    </div>
     <q-input
-      v-model="code"
-      label="Verification code"
-      stack-label
-      :dense="dense"
+      v-if="mode !== 'signOut'"
+      v-model="username"
+      label="Username"
+      hint="How we know it\'s you."
+      hide-hint
     />
     <q-input
+      v-if="mode === 'verify'"
+      v-model="code"
+      label="Verification code"
+      hint="We sent this to the email address you gave us."
+      hide-hint
+    />
+    <q-input
+      v-if="mode === 'signUp'"
       v-model="password"
       type="password"
       label="Password"
-      stack-label
-      :dense="dense"
+      hint="Make it unique and tough to crack. We got rules..."
+      hide-hint
     />
     <q-input
+      v-if="mode === 'signIn'"
       v-model="password"
       :type="isHidePwd ? 'password' : 'text'"
       label="Password"
-      stack-label
-      :dense="dense"
     >
       <template #append>
         <q-icon
@@ -30,19 +43,21 @@
       </template>
     </q-input>
     <q-input
+      v-if="mode === 'signUp'"
       v-model="email"
       label="Email"
-      stack-label
       type="email"
-      :dense="dense"
+      hint="Used to verify your account and when you forget your password."
+      hide-hint
     />
-    <q-input v-model="nickname" label="Alias" stack-label :dense="dense" />
-    <q-btn-group push>
-      <q-btn label="Sign Up" @click="handleSignUp" />
-      <q-btn label="Sign In" @click="handleSignIn" />
-      <q-btn label="Sign Out" @click="handleSignOut" />
-      <q-btn label="Confirm" @click="handleConfirmSignUp" />
-    </q-btn-group>
+    <q-input
+      v-if="mode === 'signUp'"
+      v-model="nickname"
+      label="Alias"
+      hint="A name you want to be known as."
+      hide-hint
+    />
+    <q-btn label="Do It!" @click="handleAction" />
   </div>
 </template>
 
@@ -55,8 +70,10 @@ export default {
   setup() {
     const userStore = useUserStore()
     const state = reactive({
+      mode: 'signIn',
       username: null,
       password: null,
+      passwordVerify: null,
       email: null,
       nickname: null,
       code: null,
@@ -64,6 +81,23 @@ export default {
       dense: true,
       isSignedIn: false,
     })
+    const handleAction = async () => {
+      switch (state.mode) {
+        case 'signUp':
+          await handleSignUp()
+          break
+        case 'signIn':
+          await handleSignIn()
+          break
+        case 'signOut':
+          await handleSignOut()
+          break
+        case 'confirm':
+          await handleConfirmSignUp()
+          break
+        default:
+      }
+    }
     const handleSignUp = async () => {
       try {
         const { user } = await Auth.signUp({
@@ -115,10 +149,8 @@ export default {
     }
     return {
       ...toRefs(state),
-      handleSignUp,
-      handleSignIn,
-      handleSignOut,
-      handleConfirmSignUp,
+      userStore,
+      handleAction,
     }
   },
 }
