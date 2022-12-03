@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "api": {
+      "zanzisworld": [
+        "Query",
+        "Mutation"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}

@@ -20,6 +20,15 @@
       },
       "auth": {
         "zanzisworld": {}
+      },
+      "function": {
+        "zanzisworldChatWithZanzi": {
+          "deploymentBucketName": "amplify-zanzisworld-dev-215003-deployment",
+          "s3Key": "amplify-builds/zanzisworldChatWithZanzi-484b38312f65322b4574-build.zip"
+        }
+      },
+      "api": {
+        "zanzisworld": {}
       }
     }
   }
