@@ -41,59 +41,19 @@ const chooseAnswer = () => {
   return messages[pick]
 }
 
-const saveMessage = (who, content) => {
-
-}
-
 /**
  * @type {import('@types/aws-lambda').APIGatewayProxyHandler}
  */
 exports.handler = async (event) => {
   console.log(`EVENT: ${JSON.stringify(event)}`)
+
   const { who, userMessage } = event
-  let statusCode = 200
-  let body = {}
-  let response
-
-  if (userMessage) {
-    // send to data store
-    const variables = {
-      input: {
-        who: who || 'unknown',
-        content: userMessage,
-      },
-    }
-
-    /** @type {import('node-fetch').RequestInit} */
-    const options = {
-      method: 'POST',
-      headers: {
-        'x-api-key': GRAPHQL_API_KEY,
-      },
-      body: JSON.stringify({ query, variables }),
-    }
-
-    const request = new Request(GRAPHQL_ENDPOINT, options)
-
-    try {
-      response = await fetch(request)
-      body = await response.json()
-      if (body.errors) statusCode = 400
-    } catch (error) {
-      statusCode = 400
-      body = {
-        errors: [
-          {
-            status: response.status,
-            message: error.message,
-            stack: error.stack,
-          },
-        ],
-      }
-    }
+  const statusCode = 200
+  const body = {
+    salutation: 'Dear ' + who,
+    youSaid: userMessage,
+    myReply: chooseAnswer(),
   }
-
-  body.answer = { answer: chooseAnswer() }
 
   return {
     statusCode,
