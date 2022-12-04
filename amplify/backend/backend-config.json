@@ -77,6 +77,16 @@
           ]
         }
       ]
+    },
+    "zanzisworldlayer": {
+      "providerPlugin": "awscloudformation",
+      "service": "LambdaLayer",
+      "build": true
+    },
+    "zanzisworldlayer1": {
+      "providerPlugin": "awscloudformation",
+      "service": "LambdaLayer",
+      "build": true
     }
   }
 }

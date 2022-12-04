@@ -23,6 +23,9 @@ export type AmplifyDependentResourcesAttributes = {
             "Arn": "string",
             "Region": "string",
             "LambdaExecutionRole": "string"
+        },
+        "zanzisworldlayer1": {
+            "Arn": "string"
         }
     }
 }

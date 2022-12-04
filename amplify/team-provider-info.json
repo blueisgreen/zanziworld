@@ -24,7 +24,12 @@
       "function": {
         "zanzisworldChatWithZanzi": {
           "deploymentBucketName": "amplify-zanzisworld-dev-215003-deployment",
-          "s3Key": "amplify-builds/zanzisworldChatWithZanzi-484b38312f65322b4574-build.zip"
+          "s3Key": "amplify-builds/zanzisworldChatWithZanzi-3130327868596a686b43-build.zip"
+        },
+        "zanzisworldlayer": {},
+        "zanzisworldlayer1": {
+          "deploymentBucketName": "amplify-zanzisworld-dev-215003-deployment",
+          "s3Key": "amplify-builds/zanzisworldlayer1-LambdaLayerVersion1744276a-build.zip"
         }
       },
       "api": {
