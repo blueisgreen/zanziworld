@@ -25,6 +25,11 @@ const routes = [
         name: 'main',
         component: () => import('pages/NuclearPix.vue'),
       },
+      {
+        path: 'lessons',
+        name: 'lessons',
+        component: () => import('pages/LessonPage.vue'),
+      },
     ],
   },
 
