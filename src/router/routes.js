@@ -2,13 +2,30 @@ const routes = [
   {
     path: '/',
     component: () => import('layouts/SimpleLayout.vue'),
-    children: [{ path: '', component: () => import('pages/IndexPage.vue') }],
+    children: [
+      {
+        path: '/',
+        name: 'home',
+        component: () => import('pages/IndexPage.vue'),
+      },
+      {
+        path: '/settings',
+        name: 'auth',
+        component: () => import('pages/IdentitySettings.vue'),
+      },
+    ],
   },
 
   {
-    path: '/home',
+    path: '/main',
     component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '', component: () => import('pages/NuclearPix.vue') }],
+    children: [
+      {
+        path: '',
+        name: 'main',
+        component: () => import('pages/NuclearPix.vue'),
+      },
+    ],
   },
 
   // Always leave this as last one,

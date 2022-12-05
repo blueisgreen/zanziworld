@@ -49,7 +49,7 @@ const linksList = [
   },
   {
     title: 'Forum',
-    caption: 'The Making of Zanzi World',
+    caption: 'The Making of Zanzi\'s World',
     icon: 'record_voice_over',
     link: 'https://zanzisworldofnuclearpower.locals.com/',
   },
