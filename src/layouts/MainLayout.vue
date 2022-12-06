@@ -48,6 +48,12 @@ const linksList = [
     stay: true,
   },
   {
+    title: 'Lessons',
+    caption: 'Micro-lessons about nuclear power',
+    icon: 'fa-solid fa-chalkboard-user',
+    link: '/main/lessons',
+  },
+  {
     title: 'Forum',
     caption: 'The Making of Zanzi\'s World',
     icon: 'record_voice_over',
