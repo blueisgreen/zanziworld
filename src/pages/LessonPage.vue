@@ -2,11 +2,8 @@
   <div class="q-pa-md">
     <div>Micro lessons in nanotech</div>
     <lesson-frame>
-      <template #title>How Fission Works</template>
-      <template #image
-        ><q-img
-          src="https://cdn.zanzisworld.com/images/PWR_nuclear_power_plant_diagram.svg"
-      /></template>
+      <template #title>{{ lessonTitle }}</template>
+      <template #image><q-img :src="lessonImage" /></template>
       <div v-html="lessonContent" />
     </lesson-frame>
   </div>
@@ -14,6 +11,9 @@
 
 <script setup>
 import LessonFrame from 'src/components/LessonFrame.vue'
+const lessonTitle = 'How Fission Works'
+const lessonImage =
+  'https://cdn.zanzisworld.com/images/PWR_nuclear_power_plant_diagram.svg'
 const lessonContent =
   '<p>\
         Fission happens when high-energy neutrons are shot into atoms that are \
