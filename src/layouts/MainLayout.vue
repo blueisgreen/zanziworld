@@ -11,7 +11,7 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title> Zanzibar's World of Nuclear Power </q-toolbar-title>
+        <q-toolbar-title> Zanzibar's World of Elemental Energy </q-toolbar-title>
 
         <div>on Quasar v{{ $q.version }}</div>
       </q-toolbar>
@@ -19,10 +19,19 @@
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
-        <q-item-label header> Power Lines </q-item-label>
-
+        <q-item-label header> Within the Experience </q-item-label>
         <EssentialLink
-          v-for="link in essentialLinks"
+          v-for="link in insideLinks"
+          :key="link.title"
+          v-bind="link"
+        />
+      </q-list>
+      <div>&nbsp;</div>
+      <q-separator />
+      <q-list>
+        <q-item-label header> Outside the Experience </q-item-label>
+        <EssentialLink
+          v-for="link in outsideLinks"
           :key="link.title"
           v-bind="link"
         />
@@ -39,30 +48,44 @@
 import { defineComponent, ref } from 'vue'
 import EssentialLink from 'components/EssentialLink.vue'
 
-const linksList = [
+const insideLinks = [
   {
     title: 'Ask Zanzibar',
-    caption: 'Start at the beginning',
-    icon: 'home',
+    caption: 'Offer feedback and suggestions',
+    icon: 'fa-regular fa-comments',
     link: '/',
     stay: true,
   },
   {
-    title: 'Lessons',
-    caption: 'Micro-lessons about nuclear power',
-    icon: 'fa-solid fa-chalkboard-user',
-    link: '/main/lessons',
+    title: 'Welcome',
+    caption: 'Explore the world of elemental energy',
+    icon: 'fa-solid fa-atom',
+    link: '/main',
   },
   {
-    title: 'Forum',
+    title: 'Lessons',
+    caption: 'Learn about nuclear power',
+    icon: 'fa-solid fa-chalkboard-user',
+    link: '/main/lessons',
+  }
+]
+const outsideLinks = [
+  {
+    title: 'Essays',
     caption: 'The Making of Zanzi\'s World',
-    icon: 'record_voice_over',
+    icon: 'fa-solid fa-rss',
+    link: 'https://zanzisworld.substack.com/',
+  },
+  {
+    title: 'Community',
+    caption: 'The Zanzi\'s World Community',
+    icon: 'fa-solid fa-people-group',
     link: 'https://zanzisworldofnuclearpower.locals.com/',
   },
   {
     title: 'Twitter',
     caption: '@ZanzibarNuclear',
-    icon: 'rss_feed',
+    icon: 'fa-brands fa-twitter',
     link: 'https://twitter.com/ZanzibarNuclear',
   },
 ]
@@ -78,7 +101,8 @@ export default defineComponent({
     const leftDrawerOpen = ref(false)
 
     return {
-      essentialLinks: linksList,
+      insideLinks,
+      outsideLinks,
       leftDrawerOpen,
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value
