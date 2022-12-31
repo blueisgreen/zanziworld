@@ -11,15 +11,12 @@
           :to="{ name: 'main' }"
         />
 
-        <q-toolbar-title> Zanzibar's World of Elemental Energy </q-toolbar-title>
+        <q-toolbar-title>
+          Zanzibar's World of Elemental Energy
+        </q-toolbar-title>
 
         <div>
-          <q-btn
-            label="Join on Locals"
-            href="https://zanzisworldofnuclearpower.locals.com/"
-            target="_blank"
-          />
-          <q-btn label="Sign In Here" :to="{ name: 'auth' }" />
+          <q-btn label="Sign In" :to="{ name: 'settings' }" />
         </div>
       </q-toolbar>
     </q-header>

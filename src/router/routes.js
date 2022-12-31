@@ -9,9 +9,14 @@ const routes = [
         component: () => import('pages/IndexPage.vue'),
       },
       {
-        path: '/settings',
+        path: '/auth',
         name: 'auth',
         component: () => import('pages/IdentitySettings.vue'),
+      },
+      {
+        path: '/settings',
+        name: 'settings',
+        component: () => import('pages/UserSettings.vue'),
       },
     ],
   },
