@@ -6,12 +6,12 @@
           flat
           dense
           round
-          icon="fa-solid fa-radiation"
+          icon="fa-solid fa-atom"
           aria-label="Home"
           :to="{ name: 'main' }"
         />
 
-        <q-toolbar-title> Zanzibar's World of Nuclear Power </q-toolbar-title>
+        <q-toolbar-title> Zanzibar's World of Elemental Energy </q-toolbar-title>
 
         <div>
           <q-btn
