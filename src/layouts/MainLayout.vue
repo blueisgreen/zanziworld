@@ -43,6 +43,14 @@
     <q-page-container>
       <router-view />
     </q-page-container>
+
+    <q-footer>
+      <div class="text-center">
+        Check out our
+        <a href="/policies-and-terms.html">privacy policy and terms of use</a>
+        if you like.
+      </div>
+    </q-footer>
   </q-layout>
 </template>
 
