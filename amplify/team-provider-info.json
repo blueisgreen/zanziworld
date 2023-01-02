@@ -9,7 +9,8 @@
       "UnauthRoleName": "amplify-zanzisworld-dev-215003-unauthRole",
       "StackName": "amplify-zanzisworld-dev-215003",
       "StackId": "arn:aws:cloudformation:us-west-2:686693387580:stack/amplify-zanzisworld-dev-215003/036c9010-6c85-11ed-aae1-0a31c6bae9ed",
-      "AmplifyAppId": "dpwlvo76a8ula"
+      "AmplifyAppId": "dpwlvo76a8ula",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-zanzisworld-dev-215003-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
     },
     "categories": {
       "hosting": {
@@ -19,7 +20,8 @@
         }
       },
       "auth": {
-        "zanzisworld": {}
+        "zanzisworld": {},
+        "zanzisworld61aca9ec": {}
       },
       "function": {
         "zanzisworldChatWithZanzi": {
@@ -30,6 +32,10 @@
         "zanzisworldlayer1": {
           "deploymentBucketName": "amplify-zanzisworld-dev-215003-deployment",
           "s3Key": "amplify-builds/zanzisworldlayer1-LambdaLayerVersion1744276a-build.zip"
+        },
+        "zanzisworld61aca9ecCustomMessage": {
+          "deploymentBucketName": "amplify-zanzisworld-dev-215003-deployment",
+          "s3Key": "amplify-builds/zanzisworld61aca9ecCustomMessage-517269304c614a742f6b-build.zip"
         }
       },
       "api": {
