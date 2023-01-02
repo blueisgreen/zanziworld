@@ -8,8 +8,6 @@ export type AmplifyDependentResourcesAttributes = {
     },
     "auth": {
         "zanzisworld61aca9ec": {
-            "IdentityPoolId": "string",
-            "IdentityPoolName": "string",
             "HostedUIDomain": "string",
             "OAuthMetadata": "string",
             "UserPoolId": "string",
@@ -28,12 +26,6 @@ export type AmplifyDependentResourcesAttributes = {
         },
         "zanzisworldlayer1": {
             "Arn": "string"
-        },
-        "zanzisworld61aca9ecCustomMessage": {
-            "Name": "string",
-            "Arn": "string",
-            "LambdaExecutionRole": "string",
-            "Region": "string"
         }
     }
 }

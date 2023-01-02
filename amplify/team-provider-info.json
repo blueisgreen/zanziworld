@@ -32,10 +32,6 @@
         "zanzisworldlayer1": {
           "deploymentBucketName": "amplify-zanzisworld-dev-215003-deployment",
           "s3Key": "amplify-builds/zanzisworldlayer1-LambdaLayerVersion1744276a-build.zip"
-        },
-        "zanzisworld61aca9ecCustomMessage": {
-          "deploymentBucketName": "amplify-zanzisworld-dev-215003-deployment",
-          "s3Key": "amplify-builds/zanzisworld61aca9ecCustomMessage-517269304c614a742f6b-build.zip"
         }
       },
       "api": {
